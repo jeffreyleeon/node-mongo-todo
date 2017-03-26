@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1= title
+    form(name="new_todo", method="post", action="/todos/add_todo")
+        div.input
+            span.label Title
+            input(type="text", name="title")
+        div.input
+            span.label Due Date
+            input(type="text", name="dueDate")
+            div.input
+                span.label Description
+                textarea(name="description", cols="40", rows="5")
+            div.actions
+                input(type="submit", value="add")
